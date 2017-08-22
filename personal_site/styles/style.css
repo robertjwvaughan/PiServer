@@ -1,0 +1,32 @@
+.intro {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+body {
+	background-color: black;
+}
+
+.name {
+	color: white;
+    font-family: "Courier New";
+    font-weight: lighter;
+}
+
+.main-tab {
+	font-family: "Ubuntu";
+	display: block;
+	margin: auto;
+	background-color: black;
+	color: white;
+	border: 1px solid white;
+	margin-bottom: 5px;
+}
+
+/*
+display: inline-block;
+
+*/

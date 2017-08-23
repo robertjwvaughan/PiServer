@@ -20,12 +20,12 @@ $(function() {
 
 		$('#git').click(function(e) {
 			e.preventDefault();
-			window.location = "https://github.com/robertjwvaughan";
+			newWindow("https://github.com/robertjwvaughan");
 		});
 
 		$('#linked').click(function(e) {
 			e.preventDefault();
-			window.location = "https://www.linkedin.com/in/robertjwvaughan/";
+			newWindow("https://www.linkedin.com/in/robertjwvaughan/");
 		});
 
 		$('#email').click(function(e) {
@@ -56,4 +56,14 @@ function fadeButtons () {
 			$('#email').css('visibility','visible').hide().fadeIn(750);
 		});
 	});
+}
+
+function newWindow () {
+	var win = window.open(arguments[0], "_blank");
+	if (win) {
+	    win.focus();
+	}
+	else {
+	    window.location = arguments[0];
+	}
 }

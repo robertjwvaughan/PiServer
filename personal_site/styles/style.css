@@ -10,7 +10,7 @@ body {
 	background-color: black;
 }
 
-.name {
+.title {
 	color: white;
     font-family: "Courier New";
     font-weight: lighter;
@@ -26,8 +26,58 @@ body {
 	margin-bottom: 5px;
 }
 
-.main-tab:hover {
+.email-button {
+	font-family: "Ubuntu";
+	display: block;
+	margin: auto;
+	background-color: black;
+	color: white;
+	border: 1px solid white;
+	margin-bottom: 10px;
+}
+
+.email-button:hover,.main-tab:hover {
 	background-color: white;
 	color: black;
 	border: 1px solid white;
+}
+
+.query {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: none;
+    text-align: center;
+}
+
+.input {
+	font-family: "Courier New";
+	display: block;
+	margin: auto;
+	color: white;
+	background-color: black;
+	border: 1px solid white;
+	margin-bottom: 10px;
+}
+
+.text-email {
+	font-family: "Courier New";
+	display: block;
+	margin: auto;
+	color: white;
+	background-color: black;
+	border: 1px solid white;
+	margin-bottom: 10px;
+}
+
+.your-email {
+	font-family: "Courier New";
+	display: block;
+	margin: auto;
+	color: white;
+	background-color: black;
+	border: 1px solid white;
+	margin-bottom: 10px;
 }

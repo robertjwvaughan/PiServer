@@ -11,9 +11,20 @@
 <body>
 
 <div class="intro">
-	<h1 class="name" style="display: none">Robert Vaughan</h1>
+	<h1 class="title" id="name" style="display: none">Robert Vaughan</h1>
 	<button class="main-tab" id="git" style="visibility: hidden">GitHub</button>
 	<button class="main-tab" id="linked" style="visibility: hidden">LinkedIn</button>
+	<button class="main-tab" id="email" style="visibility: hidden">Email</button>
+</div>
+
+<div class="query">
+	<h1 class="title" id="title-email" style="display: block;"></h1>
+	<input type="email" name="your-email" class="your-email" placeholder="What is your email?" required>
+	<textarea class="text-email" required></textarea>
+	<div>
+		<button class="email-button" id="send">Send</button>
+		<button class="email-button" id="back">Maybe Later</button>
+	</div>
 </div>
 
 </body>

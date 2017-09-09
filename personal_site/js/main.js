@@ -4,7 +4,6 @@ $(function() {
 			"Yay Emails!", 
 			"Because who uses fax?",
 			"Stallman, is that you?",
-			"Let's be pals.",
 			"You like Nine Inch Nails?",
 			"You like the black?",
 			"Let's talk business",

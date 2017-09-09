@@ -16,6 +16,14 @@ body {
     font-weight: lighter;
 }
 
+.div-left {
+	float: left;
+}
+
+.div-right {
+	float: right;
+}
+
 .main-tab {
 	font-family: "Ubuntu";
 	display: block;

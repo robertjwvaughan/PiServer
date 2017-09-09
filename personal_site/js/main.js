@@ -28,6 +28,16 @@ $(function() {
 			newWindow("https://www.linkedin.com/in/robertjwvaughan/");
 		});
 
+		$('#twitter').click(function(e) {
+			e.preventDefault();
+			newWindow("https://twitter.com/robertjwvaughan");
+		});
+
+		$('#instagram').click(function(e) {
+			e.preventDefault();
+			newWindow("https://www.instagram.com/robertjwvaughan/");
+		});
+
 		$('#about').click(function(e) {
 			e.preventDefault();
 			$('.intro').fadeOut( function() {
@@ -64,12 +74,16 @@ $(function() {
 
 function fadeButtons () {
 	$('.email-button').width($('.intro').width() / 2);
-	$('.main-tab').width($('.intro').width() / 2);
+	$('.main-tab').width($('.intro').width() / 2.5);
 
-	$('#git').css('visibility','visible').hide().fadeIn(500, function() {
-		$('#linked').css('visibility','visible').hide().fadeIn(500, function() {
-			$('#email').css('visibility','visible').hide().fadeIn(500, function() {
-				$('#about').css('visibility','visible').hide().fadeIn(500);
+	$('#git').css('visibility','visible').hide().fadeIn(250, function() {
+		$('#linked').css('visibility','visible').hide().fadeIn(250, function() {
+			$('#email').css('visibility','visible').hide().fadeIn(250, function() {
+				$('#about').css('visibility','visible').hide().fadeIn(250, function() {
+					$('#twitter').css('visibility','visible').hide().fadeIn(250, function() {
+						$('#instagram').css('visibility','visible').hide().fadeIn(250);
+					});
+				});
 			});
 		});
 	});

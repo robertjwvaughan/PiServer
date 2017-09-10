@@ -37,6 +37,16 @@ $(function() {
 			newWindow("https://www.instagram.com/robertjwvaughan/");
 		});
 
+		$('#cv').click(function(e) {
+			e.preventDefault();
+			newWindow("/cv.pdf");
+		});
+
+		$('#spotify').click(function(e) {
+			e.preventDefault();
+			newWindow("https://open.spotify.com/user/11128332989");
+		});
+
 		$('#about').click(function(e) {
 			e.preventDefault();
 			$('.intro').fadeOut( function() {
@@ -75,12 +85,16 @@ function fadeButtons () {
 	$('.email-button').width($('.intro').width() / 2);
 	$('.main-tab').width($('.intro').width() / 2.5);
 
-	$('#git').css('visibility','visible').hide().fadeIn(250, function() {
-		$('#linked').css('visibility','visible').hide().fadeIn(250, function() {
-			$('#email').css('visibility','visible').hide().fadeIn(250, function() {
-				$('#about').css('visibility','visible').hide().fadeIn(250, function() {
-					$('#twitter').css('visibility','visible').hide().fadeIn(250, function() {
-						$('#instagram').css('visibility','visible').hide().fadeIn(250);
+	$('#email').css('visibility','visible').hide().fadeIn(250, function() {
+		$('#about').css('visibility','visible').hide().fadeIn(250, function() {
+			$('#git').css('visibility','visible').hide().fadeIn(250, function() {
+				$('#linked').css('visibility','visible').hide().fadeIn(250, function() {
+					$('#cv').css('visibility','visible').hide().fadeIn(250, function() {
+						$('#twitter').css('visibility','visible').hide().fadeIn(250, function() {
+							$('#instagram').css('visibility','visible').hide().fadeIn(250, function() {
+								$('#spotify').css('visibility','visible').hide().fadeIn(250);
+							});
+						});
 					});
 				});
 			});

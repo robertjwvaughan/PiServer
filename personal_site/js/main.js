@@ -42,9 +42,9 @@ $(function() {
 			newWindow("/cv.pdf");
 		});
 
-		$('#spotify').click(function(e) {
+		$('#soc').click(function(e) {
 			e.preventDefault();
-			newWindow("https://open.spotify.com/user/11128332989");
+			newWindow("https://www.facebook.com/DITCompSoc/");
 		});
 
 		$('#about').click(function(e) {
@@ -82,17 +82,19 @@ $(function() {
 });
 
 function fadeButtons () {
+	var timer = 200;
+
 	$('.email-button').width($('.intro').width() / 2);
 	$('.main-tab').width($('.intro').width() / 2.5);
 
-	$('#email').css('visibility','visible').hide().fadeIn(250, function() {
-		$('#about').css('visibility','visible').hide().fadeIn(250, function() {
-			$('#git').css('visibility','visible').hide().fadeIn(250, function() {
-				$('#linked').css('visibility','visible').hide().fadeIn(250, function() {
-					$('#cv').css('visibility','visible').hide().fadeIn(250, function() {
-						$('#twitter').css('visibility','visible').hide().fadeIn(250, function() {
-							$('#instagram').css('visibility','visible').hide().fadeIn(250, function() {
-								$('#spotify').css('visibility','visible').hide().fadeIn(250);
+	$('#email').css('visibility','visible').hide().fadeIn(timer, function() {
+		$('#about').css('visibility','visible').hide().fadeIn(timer, function() {
+			$('#git').css('visibility','visible').hide().fadeIn(timer, function() {
+				$('#linked').css('visibility','visible').hide().fadeIn(timer, function() {
+					$('#cv').css('visibility','visible').hide().fadeIn(timer, function() {
+						$('#soc').css('visibility','visible').hide().fadeIn(timer, function() {
+							$('#instagram').css('visibility','visible').hide().fadeIn(timer, function() {
+								$('#twitter').css('visibility','visible').hide().fadeIn(timer);
 							});
 						});
 					});

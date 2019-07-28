@@ -22,12 +22,44 @@ div.master {
 	/*border: 1px solid #FFFFFF;*/
 }
 
+.fade-div {
+	opacity: 0;
+	animation-name: fadeIn;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
 div.icons-container {
+	width: 45vmax;
+
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	
 	margin-bottom: 10px;
-	width: 45vmax;
+
+	animation-duration: 2s;
 
 	/*border: 1px solid #FFFFFF;*/
 }
@@ -74,14 +106,12 @@ div.icon-container {
 .btn-container {
 	width: 100%;
 
-	opacity: 0;
+	/*opacity: 0;
 	transition: opacity 1s; 
 
-	/*border: 1px solid #FFFFFF;*/
-}
-
-.btn-container.fade {
-	opacity: 1;
+	border: 1px solid #FFFFFF;*/
+	/*Delays animation for buttons*/
+	animation-delay: 1s;
 }
 
 button.default-btn {
@@ -102,13 +132,4 @@ button.default-btn {
 	background-color: white;
 	color: black;
 	border: 1px solid white;
-}
-
-#fade-icons {
-	opacity: 0;
-	transition: opacity 1s; 
-}
-
-#fade-icons.fade {
-	opacity: 1;
 }

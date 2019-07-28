@@ -1,6 +1,5 @@
 window.onload = () => {
-	document.getElementById("fade-icons").classList.toggle("fade");
-	document.getElementById("fade-buttons").classList.toggle("fade");
+	console.log("Hello World.");
 }
 
 function newWindow (address) {

@@ -1,5 +1,10 @@
 window.onload = () => {
 	console.log("Hello World.");
+
+	document.getElementById("about-btn")
+		.addEventListener("click", btn => {
+			document.getElementById("about").classList.toggle("active");
+		});
 }
 
 function newWindow (address) {

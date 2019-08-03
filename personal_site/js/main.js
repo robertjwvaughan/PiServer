@@ -8,7 +8,6 @@ window.onload = () => {
 	document.addEventListener("animationend", e => {
 		if (e.animationName === "fadeOut") {
 			e.target.style.display = "none";
-			console.log("Hello World");
 		}
 	});
 }

@@ -1,10 +1,16 @@
 window.onload = () => {
-	console.log("Hello World.");
-
 	document.getElementById("about-btn")
-		.addEventListener("click", btn => {
+		.addEventListener("click", _ => {
 			document.getElementById("about").classList.toggle("active");
+			document.getElementById("home").classList.toggle("inactive");
 		});
+
+	document.addEventListener("animationend", e => {
+		if (e.animationName === "fadeOut") {
+			e.target.style.display = "none";
+			console.log("Hello World");
+		}
+	});
 }
 
 function newWindow (address) {

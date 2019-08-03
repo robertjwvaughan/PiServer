@@ -3,23 +3,25 @@ html {
 	color: #FFFFFF;
 }
 
-div.master {
+div.centre-wrapper {
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
 
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+}
 
-	margin-left: 0px;
-	margin-right: 0px;
+#home {
+	margin: 0;
 	width: 45vmax;
-
-	/*border: 1px solid #FFFFFF;*/
 }
 
 .title {
@@ -136,9 +138,29 @@ button.default-btn {
 }
 
 #about {
-	display:none;
+	width: 45vmax;
+	height: 50vmin;
+
+	overflow-y: scroll;
+	display: none;
+	opacity: 0;
+	
+	border: 1px solid #FFFFFF;
 }
 
 #about.active {
-	display:block;
+	display: block;
+	opacity: 1;
+	animation-name: fadeIn;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+#home.inactive {
+	animation-name: fadeOut;
+	opacity: 0;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
 }

@@ -35,15 +35,6 @@ div.centre-wrapper {
 	margin-bottom: 5px;
 }
 
-.fade-div {
-	opacity: 0;
-
-	animation-name: fadeIn;
-	animation-duration: 1s;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
-}
-
 @keyframes fadeIn {
 	from {
 		opacity: 0;
@@ -62,6 +53,15 @@ div.centre-wrapper {
 	to {
 		opacity: 0;
 	}
+}
+
+.fade-div {
+	animation-name: fadeIn;
+	opacity: 0;
+
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
 }
 
 div.icons-container {
@@ -143,8 +143,9 @@ button.default-btn {
 }
 
 #about {
-	width: 40vmax;
+	width: 50vmax;
 	height: 45vmin;
+	min-height: 350px;
 
 	display: none;
 	opacity: 0;
@@ -176,17 +177,38 @@ button.default-btn {
   background: #FFF; 
 }
 
-#about.active {
-	display: block;
+#home.active {
+	animation-name: fadeIn;
 	opacity: 1;
 
-	animation-name: fadeIn;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+
+	display: block;
+}
+
+#home.inactive {
+	animation-name: fadeOut;
+	opacity: 0;
+
 	animation-duration: 1s;
 	animation-iteration-count: 1;
 	animation-fill-mode: forwards;
 }
 
-#home.inactive {
+#about.active {
+	animation-name: fadeIn;
+	opacity: 1;
+
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+
+	display: block;
+}
+
+#about.inactive {
 	animation-name: fadeOut;
 	opacity: 0;
 

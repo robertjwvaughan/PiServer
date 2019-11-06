@@ -166,7 +166,7 @@ button.default-btn {
 
 	border-style: solid;
 	border-color: #FFFFFF;
-	border-width: 1px 1px 1px 1px;
+	border-width: 1px;
 }
 
 ::-webkit-scrollbar {
@@ -209,6 +209,40 @@ button.default-btn {
 }
 
 #about.inactive {
+	animation-name: fadeOut;
+	opacity: 0;
+
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+/*Tetris CSS*/
+
+#tetris {
+	width: 50vmax;
+	height: 85vmin;
+	min-height: 350px;
+
+	display: none;
+	opacity: 0;
+
+	border-color: #FFFFFF;
+	border-width: 1px;
+}
+
+#tetris.active {
+	animation-name: fadeIn;
+	opacity: 1;
+
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+
+	display: block;
+}
+
+#tetris.inactive {
 	animation-name: fadeOut;
 	opacity: 0;
 

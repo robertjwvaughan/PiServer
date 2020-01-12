@@ -221,7 +221,7 @@ button.default-btn {
 
 #tetris {
 	width: 50vmax;
-	height: 85vmin;
+	height: 95vmin;
 	min-height: 350px;
 
 	display: none;
@@ -229,6 +229,7 @@ button.default-btn {
 
 	border-color: #FFFFFF;
 	border-width: 1px;
+	background-color: #FFFFFF;
 }
 
 #tetris.active {
@@ -239,7 +240,9 @@ button.default-btn {
 	animation-iteration-count: 1;
 	animation-fill-mode: forwards;
 
-	display: block;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
 }
 
 #tetris.inactive {
@@ -249,4 +252,76 @@ button.default-btn {
 	animation-duration: 1s;
 	animation-iteration-count: 1;
 	animation-fill-mode: forwards;
+}
+
+#tetris-frame {
+	width: 100%;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	background-color: #FFFFFF;
+}
+
+.tetris-column {
+	/*background-color: #000000;*/
+}
+
+#tetris-board {
+	width: 70%;
+
+	border-color: #FFFFFF;
+	border-width: 1px;
+}
+
+#tetris-meta {
+	width: 25%;
+
+	display: flex;
+	flex-direction: column;
+
+	border-color: #000000;
+	border-width: 1px;
+}
+
+#tetris-controls {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: flex-end;
+}
+
+.control-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.middle-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.tetris-key {
+	width: 30%;
+
+	padding-top: 7.5%;
+	padding-bottom: 7.5%;
+
+	border-radius: 10%;
+
+	background-color: #000000;
+	border-color: #000000;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+#spacebar-key {
+	width: 95%;
+
+	margin-top: 15%;
+
+	border-radius: 0;
 }

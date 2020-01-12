@@ -1,9 +1,13 @@
 /*
 	Author: Robert Vaughan
 	Desc: JS for personal site
+
+	Simples
 */
 
 window.onload = () => {
+	const keys = ['a', 'w', 'd', 's'];
+
 	document.getElementById("about-btn")
 		.addEventListener("click", _ => {
 			document.getElementById("about").classList.toggle("active");
@@ -25,6 +29,22 @@ window.onload = () => {
 			document.getElementById("tetris").classList.toggle("active");
 			document.getElementById("home").classList.toggle("inactive");
 		});
+
+	window.addEventListener("keydown", function(e) {
+		if (keys.includes(e.key.toLowerCase())) {
+			changeKeyColor(e.key.toLowerCase(), "#FFFFFF");
+		}
+	});
+
+	window.addEventListener("keyup", function(e){
+		if (keys.includes(e.key.toLowerCase())) {
+			changeKeyColor(e.key.toLowerCase(), "#000000");
+		}
+	});
+}
+
+function changeKeyColor(key, color) {
+	document.getElementById(key + "-key").style.background = color;
 }
 
 function goHome(event) {

@@ -229,7 +229,9 @@ button.default-btn {
 
 	border-color: #FFFFFF;
 	border-width: 1px;
-	background-color: #FFFFFF;
+	background-color: #000000;
+
+	max-width: 800px;
 }
 
 #tetris.active {
@@ -260,8 +262,6 @@ button.default-btn {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-
-	background-color: #FFFFFF;
 }
 
 .tetris-column {
@@ -269,14 +269,15 @@ button.default-btn {
 }
 
 #tetris-board {
-	width: 70%;
+	width: 45%;
 
+	border-style: solid;
 	border-color: #FFFFFF;
 	border-width: 1px;
 }
 
 #tetris-meta {
-	width: 25%;
+	width: 35%;
 
 	display: flex;
 	flex-direction: column;
@@ -313,7 +314,7 @@ button.default-btn {
 	border-radius: 10%;
 
 	background-color: #000000;
-	border-color: #000000;
+	border-color: #FFFFFF;
 	color: #FFFFFF;
 	text-align: center;
 }
@@ -324,4 +325,14 @@ button.default-btn {
 	margin-top: 15%;
 
 	border-radius: 0;
+}
+
+#tetris-svg {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.tetris-cell {
+	margin: 0;
+    border:0px solid white;
 }

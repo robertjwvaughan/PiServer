@@ -40,7 +40,7 @@ window.onload = () => {
 		if (keys.includes(e.key.toLowerCase())) {
 			changeKeyColor(e.key.toLowerCase(), "#FFFFFF", "#000000");
 		}
-		else {
+		else if (e.key == " ") {
 			changeKeyColor(space, "#FFFFFF", "#000000");
 		}
 	});
@@ -49,7 +49,7 @@ window.onload = () => {
 		if (keys.includes(e.key.toLowerCase())) {
 			changeKeyColor(e.key.toLowerCase(), "#000000", "#FFFFFF");
 		}
-		else {
+		else if (e.key == " ") {
 			changeKeyColor(space, "#000000", "#FFFFFF");
 		}
 	});
@@ -61,23 +61,13 @@ function renderTetrisBoard() {
 	const boardLength = 20;
 	const boardWidth = 10;
 
-	const squareLength = Math.floor((document.getElementById("tetris-svg").clientWidth) / 10);
-
-	squarePixel = squareLength + "px";
-
 	const rootDiv = document.getElementById("tetris-svg");
-
-	rootDiv.style.width = (squareLength * (boardWidth)) + "px";
-	rootDiv.style.height = (squareLength * (boardLength)) + "px";
 
 	for (let i = 0; i < boardLength; i++) {
 		for (let j = 0; j < boardWidth; j++) {
 			const newCell = document.createElement("div");
 			
 			newCell.classList.add("tetris-cell");
-			newCell.style.width = squarePixel;
-			newCell.style.height = squarePixel;
-			// add the text node to the newly created div
 			rootDiv.appendChild(newCell);
 		}
 	}

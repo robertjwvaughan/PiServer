@@ -334,5 +334,9 @@ button.default-btn {
 
 .tetris-cell {
 	margin: 0;
-    border:0px solid white;
+	border:0px solid white;
+
+	background-color: red;
+	width: calc(100% / 10);
+	padding-top: calc(100% / 10);
 }

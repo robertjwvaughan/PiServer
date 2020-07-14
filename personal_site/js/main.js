@@ -5,7 +5,11 @@
 	Simples
 */
 
-const ns = "http://www.w3.org/2000/svg";
+const BOARDLENGTH = 20;
+const BOARDWIDTH = 10;
+
+const WHITE = "#FFFFFF";
+const BLACK = "#000000";
 
 window.onload = () => {
 	const keys = ['a', 'w', 'd', 's'];
@@ -38,19 +42,19 @@ window.onload = () => {
 
 	window.addEventListener("keydown", function(e) {
 		if (keys.includes(e.key.toLowerCase())) {
-			changeKeyColor(e.key.toLowerCase(), "#FFFFFF", "#000000");
+			changeKeyColor(e.key.toLowerCase(), WHITE, BLACK);
 		}
 		else if (e.key == " ") {
-			changeKeyColor(space, "#FFFFFF", "#000000");
+			changeKeyColor(space, WHITE, BLACK);
 		}
 	});
 
 	window.addEventListener("keyup", function(e){
 		if (keys.includes(e.key.toLowerCase())) {
-			changeKeyColor(e.key.toLowerCase(), "#000000", "#FFFFFF");
+			changeKeyColor(e.key.toLowerCase(), BLACK, WHITE);
 		}
 		else if (e.key == " ") {
-			changeKeyColor(space, "#000000", "#FFFFFF");
+			changeKeyColor(space, BLACK, WHITE);
 		}
 	});
 }
@@ -58,30 +62,16 @@ window.onload = () => {
 function renderTetrisBoard() {
 	// Vanilla js
 
-	const boardLength = 20;
-	const boardWidth = 10;
-
 	const rootDiv = document.getElementById("tetris-svg");
 
-	for (let i = 0; i < boardLength; i++) {
-		for (let j = 0; j < boardWidth; j++) {
+	for (let i = 0; i < BOARDLENGTH; i++) {
+		for (let j = 0; j < BOARDWIDTH; j++) {
 			const newCell = document.createElement("div");
 			
 			newCell.classList.add("tetris-cell");
 			rootDiv.appendChild(newCell);
 		}
 	}
-
-	// var div = document.getElementById('tetris-svg') 
-	// var svg = document.createElementNS(ns, 'svg')
-	// svg.setAttributeNS(null, 'width', squareLength)
-	// svg.setAttributeNS(null, 'height', squareLength)
-	// div.appendChild(svg)
-	// var rect = document.createElementNS(ns, 'rect')
-	// rect.setAttributeNS(null, 'width', 100)
-	// rect.setAttributeNS(null, 'height', 100)
-	// rect.setAttributeNS(null, 'fill', '#f06')
-	// svg.appendChild(rect)
 }
 
 function changeKeyColor(key, color, textColor) {

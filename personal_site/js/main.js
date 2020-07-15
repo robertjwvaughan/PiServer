@@ -61,13 +61,12 @@ window.onload = () => {
 
 function renderTetrisBoard() {
 	// Vanilla js
-
 	const rootDiv = document.getElementById("tetris-svg");
 
-	for (let i = 0; i < BOARDLENGTH; i++) {
-		for (let j = 0; j < BOARDWIDTH; j++) {
+	for (let y = 0; y < BOARDLENGTH; y++) {
+		for (let x = 0; x < BOARDWIDTH; x++) {
 			const newCell = document.createElement("div");
-			
+			newCell.id = "tc" + y + "" + x + "";
 			newCell.classList.add("tetris-cell");
 			rootDiv.appendChild(newCell);
 		}
